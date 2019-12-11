@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "Testing sandbox:";
+  title: string = "Testing sandbox:";
+  allowNewServer: boolean = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 }

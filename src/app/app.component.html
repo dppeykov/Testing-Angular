@@ -10,7 +10,11 @@
   />
   <hr />
   <!-- Here we are using property binding = good when we are changeing the property-->
-  <button class="btn btn-primary" [disabled]="!allowNewServer">
+  <button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+  >
     + Add Server
   </button>
   <!-- Here we are using string interpolation = good for just displaying the property-->
@@ -18,5 +22,6 @@
     The value of the disabled is (changes after 2 seconds):
     <span class="badge badge-warning text-wrap">{{ allowNewServer }}</span>
   </p>
+  <p>{{ serverCreationStatus }}</p>
   <app-test></app-test>
 </div>

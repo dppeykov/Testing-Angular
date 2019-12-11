@@ -50,7 +50,5 @@
     </p>
   </ng-template>
   <hr />
-  <app-test></app-test>
-  <app-test></app-test>
-  <app-test></app-test>
+  <app-test *ngFor="let server of servers"></app-test>
 </div>

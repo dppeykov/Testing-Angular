@@ -21,7 +21,9 @@ export class AppComponent {
 
   // event binding function
   onCreateServer() {
-    this.serverCreationStatus = "A new server has been created!";
+    this.serverCreationStatus = `A new server ${
+      this.serverName
+    } has been created!`;
   }
 
   onUpdateServerName(event: any) {

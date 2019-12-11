@@ -41,7 +41,13 @@
     <span class="badge badge-warning text-wrap">{{ !allowNewServer }}</span>
     (changes after 2 seconds)
   </p>
-  <!-- ngIf is a build-in directive - it will parse the code only upon a certain condition -->
-  <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+  <!-- ngIf is a build-in structural directive - it will parse the code only upon a certain condition -->
+  <p *ngIf="serverCreated ; else noServer">{{ serverCreationStatus }}</p>
+  <ng-template #noServer>
+    <p>
+      Text showing when there is no server created - using *ngIf + else
+      directive
+    </p>
+  </ng-template>
   <app-test></app-test>
 </div>

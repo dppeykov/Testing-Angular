@@ -9,6 +9,7 @@ export class AppComponent {
   title: string = "Testing sandbox:";
   allowNewServer: boolean = false;
   serverCreationStatus: string = "No server has been created!";
+  serverName: string = "";
 
   constructor() {
     setTimeout(() => {
@@ -20,4 +21,14 @@ export class AppComponent {
   onCreateServer() {
     this.serverCreationStatus = "A new server has been created!";
   }
+
+  onUpdateServerName(event: any) {
+    this.serverName = event.target.value;
+  }
+
+  // can be done with explicit type casting - warning in eslint
+
+  // onUpdateServerName(event: Event) {
+  //   this.serverName = (<HTMLInputElement>event.target).value;
+  // }
 }

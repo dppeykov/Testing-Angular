@@ -12,6 +12,7 @@ export class AppComponent {
   serverName: string = "Only 1 way binding";
   serverName2way: string =
     "Shows the text in both places as it is 2 way binding";
+  serverCreated: boolean = false;
 
   constructor() {
     setTimeout(() => {
@@ -21,6 +22,7 @@ export class AppComponent {
 
   // event binding function
   onCreateServer() {
+    this.serverCreated = true;
     this.serverCreationStatus = `A new server ${
       this.serverName
     } has been created!`;

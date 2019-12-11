@@ -37,9 +37,11 @@
   </button>
   <!-- Here we are using string interpolation = good for just displaying the property-->
   <p>
-    The value of the disabled is (changes after 2 seconds):
-    <span class="badge badge-warning text-wrap">{{ allowNewServer }}</span>
+    The value of the disabled is:
+    <span class="badge badge-warning text-wrap">{{ !allowNewServer }}</span>
+    (changes after 2 seconds)
   </p>
-  <p>{{ serverCreationStatus }}</p>
+  <!-- ngIf is a build-in directive - it will parse the code only upon a certain condition -->
+  <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
   <app-test></app-test>
 </div>

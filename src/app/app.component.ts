@@ -9,7 +9,9 @@ export class AppComponent {
   title: string = "Testing sandbox:";
   allowNewServer: boolean = false;
   serverCreationStatus: string = "No server has been created!";
-  serverName: string = "";
+  serverName: string = "Only 1 way binding";
+  serverName2way: string =
+    "Shows the text in both places as it is 2 way binding";
 
   constructor() {
     setTimeout(() => {

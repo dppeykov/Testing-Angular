@@ -17,6 +17,14 @@
   />
   <p>Input form text: {{ serverName }}</p>
   <br />
+
+  <hr />
+  <!-- 2 way databinding [(ngModel)="..."]- need FormsModule to be added in the app.module -->
+  <label>Server Name (with 2-way-databinding)</label>
+  <input type="text" class="form-control" [(ngModel)]="serverName2way" />
+  <p>Input form text with 2 way databinding: {{ serverName2way }}</p>
+  <br />
+
   <!-- Here we are using property binding = good when we are changeing the property-->
   <!-- The onCreateServer method is passed from the app.component.ts - event binding-->
 
